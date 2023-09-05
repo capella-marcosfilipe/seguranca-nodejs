@@ -47,7 +47,7 @@ class UsuarioController {
     const { id } = req.params;
     try {
       await usuarioService.deletarRegistro(id);
-      return res.status(200).json({ mensagem: `id ${id} deletado`});
+      return res.status(200).json({ mensagem: `id ${id} deletado` });
     } catch (error) {
       return res.status(500).json({ message: error.message });
     }
